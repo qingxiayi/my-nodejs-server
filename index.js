@@ -437,6 +437,7 @@ const server = http.createServer((req, res) => {
     } else {
         // 404页面
         res.statusCode = 404;
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
         res.end(`
             <!DOCTYPE html>
             <html>
